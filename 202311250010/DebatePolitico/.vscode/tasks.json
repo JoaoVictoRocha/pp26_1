@@ -1,0 +1,27 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "Compilar Projeto Debate",
+            "command": "g++",
+            "args": [
+                "-g",
+                "${workspaceFolder}\\*.cpp",
+                "-o",
+                "${workspaceFolder}\\debate.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Tarefa de compilação para múltiplos arquivos C++"
+        }
+    ]
+}
