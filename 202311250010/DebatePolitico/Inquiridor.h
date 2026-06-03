@@ -8,4 +8,4 @@ public:
     void perguntar(int tempo);
     void replica(int tempo);
 };
-#endif
+#endif 

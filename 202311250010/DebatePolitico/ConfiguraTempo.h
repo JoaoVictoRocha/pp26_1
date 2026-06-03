@@ -9,8 +9,9 @@ private:
     int tempoTreplica;
 
 public:
-    ConfiguraTempo(int pergunta = 30, int resposta = 60, int replica = 30, int treplica = 30);
-
+    ConfiguraTempo() = default;
+    ConfiguraTempo(int pergunta, int resposta, int replica, int treplica);
+    
     int getPergunta() const;
     int getResposta() const;
     int getReplica() const;

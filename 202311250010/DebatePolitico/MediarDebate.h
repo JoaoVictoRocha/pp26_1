@@ -2,6 +2,7 @@
 #define MEDIARDEBATE_H
 
 #include "MediadorBase.h"
+#include "ColaboradorPolitico.h"
 #include "Inquiridor.h"
 #include "Inquirido.h"
 #include "ConfiguraTempo.h"
@@ -12,8 +13,9 @@ private:
     Inquirido* inquirido;
 
 public:
-    void setInquiridor(Inquiridor* inq);
-    void setInquirido(Inquirido* inq);
+    MediarDebate();
+    void setInquiridor(ColaboradorPolitico* inq);
+    void setInquirido(ColaboradorPolitico* inq);
     void debate(ConfiguraTempo& config) override; 
 };
 

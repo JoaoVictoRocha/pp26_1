@@ -23,7 +23,6 @@ bool GerenciaPolitico::urnaVazia() {
 }
 
 DadosCandidato GerenciaPolitico::sortearInquiridorPendente() {
-    // Sorteia, salva o dado, remove da urna de pendentes e retorna
     int index = std::rand() % inquiridoresPendentes.size();
     DadosCandidato sorteado = inquiridoresPendentes[index];
     inquiridoresPendentes.erase(inquiridoresPendentes.begin() + index);
@@ -36,6 +35,5 @@ DadosCandidato GerenciaPolitico::obterCandidatoPorNome(const std::string& nome) 
             return candidato; 
         }
     }
-    // Retorna uma ficha vazia caso o nome digitado não exista
     return {"", "", std::vector<Eleitor*>()}; 
 }

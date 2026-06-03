@@ -182,3 +182,9 @@ Candidato CAIADO esta exercendo: Pergunta
 Candidato BOLSONARO esta exercendo: Resposta
 Candidato CAIADO esta exercendo: Replica
 Candidato BOLSONARO esta exercendo: Treplica
+--- PREPARANDO DEBATE ---
+--- PREPARANDO DEBATE ---
+Candidato ZEMA esta exercendo: Pergunta
+Candidato LULA esta exercendo: Resposta
+Candidato ZEMA esta exercendo: Replica
+Candidato LULA esta exercendo: Treplica

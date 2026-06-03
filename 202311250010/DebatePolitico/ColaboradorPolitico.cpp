@@ -18,7 +18,7 @@ void ColaboradorPolitico::cadastrarEleitor(IObservador* obs) {
 
 void ColaboradorPolitico::removerEleitor(IObservador* obs) {
     observadores.erase(
-        std::remove(observadores.begin(), observadores.end(), obs), 
+        std::remove(observadores.begin(), observadores.end(), obs),
         observadores.end()
     );
 }
@@ -31,10 +31,7 @@ void ColaboradorPolitico::notificarEleitores(const std::string& mensagem) {
 
 void ColaboradorPolitico::iniciarFala(const std::string& tipo) {
     std::string mensagem = "Candidato " + nome + " esta exercendo: " + tipo;
-    
-    // Registra no Log
     LogSistem::getInstance()->registrar(mensagem);
-
     notificarEleitores(mensagem);
     microfone.liga();
 }

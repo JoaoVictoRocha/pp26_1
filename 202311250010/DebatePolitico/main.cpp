@@ -4,19 +4,16 @@
 #include <iostream>
 
 int main() {
-    // Garante que o sorteio seja aleatório a cada execução
     std::srand(static_cast<unsigned int>(std::time(nullptr)));
 
     FachadaDebate* sistema = FachadaDebate::getInstance();
     sistema->configuracaoTempo(30, 60, 30, 30);
 
-    // Cadastrando candidatos na Fachada
     sistema->adicionarCandidato("LULA", "Partido A");
     sistema->adicionarCandidato("BOLSONARO", "Partido B");
     sistema->adicionarCandidato("CAIADO", "Partido C");
     sistema->adicionarCandidato("ZEMA", "Partido D");
 
-    // Cadastrando e vinculando eleitores
     Eleitor e1("Lucas");
     Eleitor e2("Julia");
     Eleitor e3("Marcos");
@@ -29,7 +26,6 @@ int main() {
 
     std::cout << "\n========== DEBATE ==========\n";
     
-    // Inicia o fluxo de controle
     sistema->prepararDebate();
 
     while(!sistema->debateFinalizado()) {

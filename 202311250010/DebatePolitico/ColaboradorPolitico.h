@@ -1,12 +1,10 @@
 #ifndef COLABORADORPOLITICO_H
 #define COLABORADORPOLITICO_H
 
-#include <vector>
 #include <string>
+#include <vector>
 #include "IObservador.h"
 #include "Microfone.h"
-
-class MediadorBase;
 
 class ColaboradorPolitico {
 protected:
@@ -15,7 +13,9 @@ protected:
     bool inquiridor;
     Microfone microfone;
     std::vector<IObservador*> observadores;
-    MediadorBase* mediador;
+
+    void notificarEleitores(const std::string& mensagem);
+    void iniciarFala(const std::string& tipo);
 
 public:
     ColaboradorPolitico(const std::string& nome, const std::string& partido);
@@ -26,8 +26,6 @@ public:
 
     void cadastrarEleitor(IObservador* obs);
     void removerEleitor(IObservador* obs);
-    void notificarEleitores(const std::string& mensagem);
-    void iniciarFala(const std::string& tipo);
 };
 
 #endif
